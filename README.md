@@ -1,19 +1,14 @@
-# vue-slot
+<!--
+ * @Descripttion: 
+ * @Author: liuy
+ * @LastEditors: liuy
+ * @Date: 2020-09-02 15:44:40
+ * @LastEditTime: 2020-09-02 16:34:13
+-->
+### 插槽是使用在子组件中的
+### 是为了将父组件中的子组件模板数据正常显示
+### 具名插槽
+### 作用域插槽
+### 解构插槽Prop
+### 动态插槽名（2.6.0新增）
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
