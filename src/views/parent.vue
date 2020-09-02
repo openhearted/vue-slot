@@ -3,16 +3,16 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-02 14:58:29
- * @LastEditTime: 2020-09-02 16:34:26
+ * @LastEditTime: 2020-09-02 17:32:16
 -->
 <template>
     <div class="parent">
         <div>使用子组件slot的内容</div>
-        <div>
-            <child>
-                <div>一个单眼皮，胆小但是却很阳光帅气的男孩子哎</div><br>
-            </child>
-        </div>
+        <child>
+            <div>一个单眼皮，胆小但却很阳光帅气的男孩子哎</div><br>
+            <!-- 不能访问子组件的数据了 -->
+            <div>{{ child.a }}</div>
+        </child>
     </div>
 </template>
 <script>
@@ -22,6 +22,13 @@ export default {
     components: {
         child
     },
+    data() {
+        return {
+            parent: {
+                a: "我是父组件的a"
+            }
+        }
+    }
 }
 </script>
 <style>

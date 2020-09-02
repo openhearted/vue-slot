@@ -3,7 +3,7 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-02 14:56:20
- * @LastEditTime: 2020-09-02 16:26:21
+ * @LastEditTime: 2020-09-02 17:31:34
 -->
 <template>
     <div class="child">
@@ -13,7 +13,14 @@
 </template>
 <script>
 export default {
-    name: 'child'
+    name: 'child',
+    data() {
+        return {
+            child: {
+                a: "我是子组件的a"
+            }
+        }
+    }
 }
 </script>
 <style>
