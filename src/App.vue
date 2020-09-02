@@ -1,8 +1,14 @@
+<!--
+ * @Descripttion: 
+ * @Author: liuy
+ * @LastEditors: liuy
+ * @Date: 2020-09-02 15:44:34
+ * @LastEditTime: 2020-09-02 15:45:40
+-->
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/"></router-link>
     </div>
     <router-view/>
   </div>
