@@ -3,12 +3,16 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-02 15:44:34
- * @LastEditTime: 2020-09-02 15:45:40
+ * @LastEditTime: 2020-09-02 20:38:28
 -->
 <template>
   <div id="app">
     <div id="nav">
       <router-link to="/"></router-link>
+      <div class="slot">
+        <router-link to="/">slot</router-link> | 
+        <router-link to="/named">named</router-link> | 
+      </div>
     </div>
     <router-view/>
   </div>
@@ -34,5 +38,9 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.slot{
+  position:absolute
 }
 </style>

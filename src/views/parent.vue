@@ -3,7 +3,7 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-02 14:58:29
- * @LastEditTime: 2020-09-02 17:32:16
+ * @LastEditTime: 2020-09-02 19:55:37
 -->
 <template>
     <div class="parent">
@@ -11,7 +11,7 @@
         <child>
             <div>一个单眼皮，胆小但却很阳光帅气的男孩子哎</div><br>
             <!-- 不能访问子组件的数据了 -->
-            <div>{{ child.a }}</div>
+            <!-- <div>{{ child.a }}</div> -->
         </child>
     </div>
 </template>
