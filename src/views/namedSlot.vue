@@ -3,10 +3,10 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-02 20:22:48
- * @LastEditTime: 2020-09-02 20:33:37
+ * @LastEditTime: 2020-09-03 20:10:34
 -->
 <template>
-    <div class="container">
+    <div class="child">
       <header>
         <slot name="header"></slot>
       </header>

@@ -3,7 +3,7 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-02 15:44:34
- * @LastEditTime: 2020-09-02 20:38:28
+ * @LastEditTime: 2020-09-02 20:51:30
 -->
 <template>
   <div id="app">
@@ -12,6 +12,7 @@
       <div class="slot">
         <router-link to="/">slot</router-link> | 
         <router-link to="/named">named</router-link> | 
+        <router-link to="/scope">scope</router-link> | 
       </div>
     </div>
     <router-view/>

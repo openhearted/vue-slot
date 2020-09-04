@@ -6,7 +6,7 @@
  * @LastEditTime: 2020-09-02 20:41:26
 -->
 <template>
-    <div class="named">
+    <div class="parent">
       <named-slot>
         <template v-slot:header>
           <h1>header</h1>
