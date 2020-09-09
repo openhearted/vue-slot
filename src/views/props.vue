@@ -3,7 +3,7 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-08 16:19:19
- * @LastEditTime: 2020-09-09 11:04:15
+ * @LastEditTime: 2020-09-09 15:50:53
 -->
 <template>
   <div>
@@ -16,7 +16,7 @@
               <span @click="getBottonVisible(scope.row)">{{ scope.row.date }}</span>
           </template>
           <template v-slot:header-name>
-            <span>名字&nbsp;&nbsp;&nbsp;</span
+            <span>昵称&nbsp;&nbsp;&nbsp;</span
             ><el-tooltip class="item" effect="light" content="这个名字仅代表昵称哦" placement="bottom-start">
                 <i class="el-icon-question"></i>
             </el-tooltip>
@@ -24,8 +24,7 @@
           <template v-slot:name="scope">
             <span v-if="Array.isArray(scope.row.name)">
               <template v-for="rn in scope.row.name">
-                  <span
-                    :class="[ rn.what == 'big' ? 'green-span': 'red-span']"
+                  <span :class="[ rn.what == 'big' ? 'green-span': 'red-span']"
                     >{{ rn.name }}</span
                   ><br>
               </template>

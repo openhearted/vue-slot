@@ -3,7 +3,7 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-08 21:59:12
- * @LastEditTime: 2020-09-09 11:07:14
+ * @LastEditTime: 2020-09-09 15:52:09
 -->
 <template>
   <div>
@@ -13,18 +13,19 @@
     >
       <template v-for="tc in tableColumn">
         <el-table-column
-          :prop="tc.key"
           :key="tc.key"
         >
-          <template v-slot:header="scope">
-            <slot :name="'header-' + tc.key" :row="scope">{{ tc.label }}</slot>
+          <template v-slot:header>
+            <slot :name="'header-' + tc.key">{{ tc.label }}</slot>
           </template>
-          <template v-slot="scope">
+          <template v-slot="{ row }">
+            <!-- <span>{{ row }}</span> -->
             <slot
               :name="tc.key"
-              :row="scope.row"
+              :row="row"
             >
-              <span>{{ scope.row[tc.key] }}</span>
+            <!-- 备用内容 -->
+              <!-- <span>{{ row.address }}</span> -->
             </slot>
           </template>
         </el-table-column>
@@ -45,6 +46,11 @@ export default {
         type: Array,
         default: []
       }
-  }
+  },
+  methods: {
+    alert(val){
+      console.log(val);
+    }
+  },
 }
 </script>
