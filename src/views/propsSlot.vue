@@ -3,7 +3,7 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-08 21:59:12
- * @LastEditTime: 2020-09-09 15:52:09
+ * @LastEditTime: 2020-09-09 19:17:00
 -->
 <template>
   <div>
@@ -15,17 +15,20 @@
         <el-table-column
           :key="tc.key"
         >
-          <template v-slot:header>
-            <slot :name="'header-' + tc.key">{{ tc.label }}</slot>
+          <template slot="header" slot-scope="{ row, column, $index }">
+            <!-- row 拿不到，只有 column 和 $index -->
+            <slot :name="'header-' + tc.key" :row="row" :column="column">{{ tc.label }}</slot>
           </template>
-          <template v-slot="{ row }">
+          <template slot-scope="{ row }">
+            <!-- 备用内容 -->
             <!-- <span>{{ row }}</span> -->
+            <!-- 4.2 - 后备内容展示 :row="xxx" -->
             <slot
               :name="tc.key"
               :row="row"
             >
             <!-- 备用内容 -->
-              <!-- <span>{{ row.address }}</span> -->
+            <!-- <span>{{ row.address }}</span> -->
             </slot>
           </template>
         </el-table-column>

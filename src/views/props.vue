@@ -3,7 +3,7 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-08 16:19:19
- * @LastEditTime: 2020-09-09 15:50:53
+ * @LastEditTime: 2020-09-09 21:24:40
 -->
 <template>
   <div>
@@ -12,28 +12,58 @@
       <props-slot
           :tableData="tableData"
           :table-column="tableColumn">
-          <template v-slot:date="scope">
-              <span @click="getBottonVisible(scope.row)">{{ scope.row.date }}</span>
-          </template>
-          <template v-slot:header-name>
+
+          <template slot="header-name">
             <span>昵称&nbsp;&nbsp;&nbsp;</span
             ><el-tooltip class="item" effect="light" content="这个名字仅代表昵称哦" placement="bottom-start">
                 <i class="el-icon-question"></i>
             </el-tooltip>
           </template>
-          <template v-slot:name="scope">
-            <span v-if="Array.isArray(scope.row.name)">
-              <template v-for="rn in scope.row.name">
+          <!-- row 拿不到，只有 column 和 $index -->
+          <!-- <template slot="header-name" slot-scope="{ row, column }">
+            <span>{{ row }}</span>
+            <span>{{ column }}</span>
+          </template> -->
+
+          <template slot="date" slot-scope="{ row }">
+              <span @click="getBottonVisible(row)">{{ row.date }}</span>
+          </template>
+
+          <template slot="name" slot-scope="{ row }">
+            <span v-if="Array.isArray(row.name)">
+              <template v-for="rn in row.name">
                   <span :class="[ rn.what == 'big' ? 'green-span': 'red-span']"
                     >{{ rn.name }}</span
                   ><br>
               </template>
             </span>
           </template>
-          <template v-slot:address="scope">
-            <el-tooltip class="item" effect="light" :content="scope.row.address" placement="bottom-start">
-                </span><span>{{ scope.row.address }}</span>
+
+          <template slot="address" slot-scope="{ row }">
+            <el-tooltip class="item" effect="light" :content="row.address" placement="bottom-start">
+              <span>{{ row.address }}</span>
             </el-tooltip>
+          </template>
+
+          <!-- 4.1 重命名 -->
+          <!-- <template slot="address" slot-scope="{ row: descripttion }">
+              <p>{{ descripttion.address }}</p>
+          </template> -->
+  
+          <!-- 4.2 定义后备内容，但是 propsSlot 能拿到 row.address 的值，所以后备内容不起作用 -->
+          <!-- <template slot="address" slot-scope="{ row = { address: '后备内容'} }">
+            <span>{{ row.address }}</span>
+          </template> -->
+      </props-slot>
+      <br/><br/>
+      <hr/>
+
+      <!-- 动态插槽 -->
+      <props-slot
+          :tableData="tableData"
+          :table-column="tableColumn">
+          <template v-slot:[dynamicSlotName]="{ row }">
+              <span>{{ row.address }}</span>
           </template>
       </props-slot>
     </div>
@@ -51,7 +81,8 @@ export default {
       return {
           tableColumn : [],
           tableData : [],
-          buttonText: ''
+          buttonText: '',
+          dynamicSlotName: 'address'
       }
     },
     mounted() {

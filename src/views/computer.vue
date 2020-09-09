@@ -3,25 +3,37 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-07 11:05:44
- * @LastEditTime: 2020-09-09 15:49:24
+ * @LastEditTime: 2020-09-09 19:35:05
 -->
 <template>
     <div class="parent">
         <h3>电脑配置</h3>
         <computer-slot>
-            <template v-slot:CPU>
+            <template slot="CPU">
                 <div>Intel Core i7</div>
             </template>
-            <template v-slot:GPU>
+            <template slot="GPU">
                 <div>GTX980Ti</div>
             </template>
-            <template v-slot:Memory>
+            <template slot="Memory">
                 <div>Kingston 64G</div>
             </template>
-            <template v-slot:Hard-drive>
+            <template slot="Hard-drive">
                 <div>Samsung SSD 1T</div>
             </template>
         </computer-slot>
+
+
+        <!-- v-slot 只能添加在 <template> 上 -->
+        <!-- <computer-slot>
+            <div v-slot:CPU>
+            </div>
+        </computer-slot> -->
+
+        <!-- 只有一个例外 -->
+        <!-- <computer-slot v-slot:CPU>
+            <span>111</span>
+        </computer-slot> -->
     </div>
 </template>
 <script>
