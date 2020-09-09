@@ -3,7 +3,7 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-02 20:48:38
- * @LastEditTime: 2020-09-09 21:43:34
+ * @LastEditTime: 2020-09-09 21:49:39
 -->
 <template>
   <div class="parent">
@@ -93,7 +93,6 @@
           <span>多个默认插槽</span>
         </template>
     </scope-slot> -->
-    
   </div>
 </template>
 
