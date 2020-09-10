@@ -3,7 +3,7 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-07 11:05:44
- * @LastEditTime: 2020-09-10 10:03:47
+ * @LastEditTime: 2020-09-10 10:46:33
 -->
 <template>
     <div class="parent">
@@ -47,7 +47,7 @@ export default {
 </script>
 <style>
 .parent{
-    color:green;
+    color:rgb(33, 204, 33);
     width: 700px;
     margin: 100px auto ; 
 }

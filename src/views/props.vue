@@ -3,7 +3,7 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-08 16:19:19
- * @LastEditTime: 2020-09-10 10:06:38
+ * @LastEditTime: 2020-09-10 10:48:30
 -->
 <template>
   <div>
@@ -134,9 +134,9 @@ export default {
 </script>
 <style>
 .green-span {
-  color: green;
+  color: rgb(33, 204, 33);
 }
 .red-span {
-  color: red;
+  color: rgb(253, 22, 22);
 }
 </style>

@@ -3,7 +3,7 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-07 11:05:44
- * @LastEditTime: 2020-09-09 19:34:17
+ * @LastEditTime: 2020-09-10 10:48:06
 -->
 <template>
     <div class="child">
@@ -25,6 +25,6 @@ export default {
 </script>
 <style>
 .child{
-    color:red
+    color:rgb(253, 22, 22)
 }
 </style>

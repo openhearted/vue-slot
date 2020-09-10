@@ -3,13 +3,14 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-02 20:48:38
- * @LastEditTime: 2020-09-10 00:03:52
+ * @LastEditTime: 2020-09-10 10:51:00
 -->
 <template>
   <div class="parent">
     <h3>这里是父组件</h3>
     <hr/>
     
+    <!-- 第一次使用 -->
     <scope-slot>
       <template slot="data" slot-scope="dataProps">
         <div class="tmpl">
@@ -25,6 +26,7 @@
     </scope-slot>
     <hr/>
 
+    <!-- 第二次使用 -->
     <scope-slot>
       <!-- 2.3 页面会根据子组件中slot的顺序去替换内容并渲染页面 -->
       <!-- <template slot="data" slot-scope="dataProps">
@@ -54,7 +56,7 @@
     </scope-slot>
     <hr/>
     
-    
+    <!-- 第三次使用 -->
     <scope-slot>
         <template slot="string" slot-scope="stringProps">
             {{ stringProps.string }}
@@ -116,7 +118,7 @@ export default {
   width: 100px;
   height: 100px;
   margin: 10px;
-  background-color: rgb(189, 181, 181);
+  background-color: rgb(212, 211, 211);
   display: block;
   text-align: center;
 }

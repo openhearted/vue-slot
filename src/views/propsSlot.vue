@@ -3,7 +3,7 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-08 21:59:12
- * @LastEditTime: 2020-09-09 23:44:14
+ * @LastEditTime: 2020-09-10 10:45:19
 -->
 <template>
   <div>
@@ -16,13 +16,14 @@
           :key="tc.key"
         >
           <template slot="header" slot-scope="{ row, column, $index }">
+            <span style="color: purple">{{ $index }}</span>
             <!-- row 拿不到，只有 column 和 $index -->
             <slot :name="'header-' + tc.key" :row="row" :column="column">{{ tc.label }}</slot>
           </template>
-          <template slot-scope="{ row }">
+          <template slot-scope="{ row, column, $index }">
+            <span style="color: orange">{{ $index }}</span>
             <!-- 备用内容 -->
             <!-- <span>{{ row }}</span> -->
-            
             <!-- 4.2 - 后备内容展示 :row="xxx" -->
             <slot
               :name="tc.key"
