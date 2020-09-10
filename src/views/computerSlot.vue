@@ -3,7 +3,7 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-07 11:05:44
- * @LastEditTime: 2020-09-10 10:48:06
+ * @LastEditTime: 2020-09-10 13:27:35
 -->
 <template>
     <div class="child">
@@ -15,7 +15,7 @@
 
     <!-- v-slot 只能添加在 <template> 上 (只有一种例外情况) -->
     <!-- <div class="child">
-        <slot name="CPU">这插你的CPU</slot>
+        <slot name="CPU">只是个例外</slot>
     </div> -->
 </template>
 <script>

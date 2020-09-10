@@ -3,7 +3,7 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-08 16:19:19
- * @LastEditTime: 2020-09-10 10:48:30
+ * @LastEditTime: 2020-09-10 13:51:02
 -->
 <template>
   <div>
@@ -58,13 +58,21 @@
       <br/><br/>
       <hr/>
 
-      <!-- 动态插槽 -->
       <props-slot
           :tableData="tableData"
           :table-column="tableColumn">
+          <!-- 5 动态插槽 -->
           <template v-slot:[dynamicSlotName]="{ row }">
               <span>{{ row.address }}</span>
           </template>
+
+          <!-- <template slot="name" slot-scope="{ row }">
+            <span v-if="Array.isArray(row.name)">
+              <template v-for="rn in row.name">
+                  {{ rn.name }}<br>
+              </template>
+            </span>
+          </template> -->
       </props-slot>
     </div>
   </div>

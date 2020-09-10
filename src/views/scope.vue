@@ -3,7 +3,7 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-02 20:48:38
- * @LastEditTime: 2020-09-10 10:51:00
+ * @LastEditTime: 2020-09-10 13:45:52
 -->
 <template>
   <div class="parent">
@@ -20,7 +20,7 @@
       <!-- 2.1 同一个名称的插槽只能写一次，否则会被覆盖 -->
       <!-- <template slot="data" slot-scope="dataProps">
           <div class="tmpl">
-            <span v-for="item in dataProps.data"> 覆盖原来的数据 </span>
+            <span v-for="item in dataProps.data"> 我被覆盖了！ </span>
           </div>
       </template> -->
     </scope-slot>
@@ -43,7 +43,7 @@
       
       <!-- 3.6 子组件如果有多个默认插槽时，父组件访问作用域的时候需要注意 -->
       <!-- <template slot-scope="msgProps">
-       {{ msgProp }}
+       {{ msgProps }}
       </template> -->
       
       <!-- 3.1 插槽 v-slot:string 可缩写为 #string，并且默认插槽的缩写为 #default，否则无效 -->
@@ -66,14 +66,14 @@
 
 
     <!-- 3.2 默认插槽的缩写语法不能和具名插槽混用，因为它会导致作用域不明确 -->
-    <!-- <scope-slot slot-scope="msgProps">
+    <!-- <scope-slot slot-scope="stringProps">
       <template slot="string" slot-scope="stringProps">
        {{stringProps.string}}
       </template>
     </scope-slot>
     <hr/> -->
 
-    <!-- 3.3 如果没有为对应插槽写完整的结构，那么插槽失效，包括dom不完整，作用域不完整，插槽名字不完整-->
+    <!-- 3.3 如果没有为对应插槽写完整的结构，那么插槽失效，包括需要替代的内容，作用域不完整，插槽名字不完整-->
     <!-- <scope-slot>
       <template slot="string" slot-scope="stringProps">
         {{stringProps.string}}

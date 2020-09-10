@@ -3,7 +3,7 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-07 11:05:44
- * @LastEditTime: 2020-09-10 10:46:33
+ * @LastEditTime: 2020-09-10 13:27:51
 -->
 <template>
     <div class="parent">
@@ -30,9 +30,8 @@
             </div>
         </computer-slot> -->
 
-        <!-- 只有一个例外 -->
+        <!-- 只是个例外 -->
         <!-- <computer-slot v-slot:CPU>
-            <span>111</span>
         </computer-slot> -->
     </div>
 </template>
