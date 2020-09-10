@@ -3,11 +3,11 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-08 16:19:19
- * @LastEditTime: 2020-09-09 23:47:05
+ * @LastEditTime: 2020-09-10 10:06:38
 -->
 <template>
   <div>
-    <el-button v-if="buttonText !== ''" style="float: right; margin-right: 50px" type="primary" plain>{{ buttonText }}</el-button>
+    <el-button v-if="buttonText !== ''" style="float: left; margin-left: 80px" type="primary" plain>{{ buttonText }}</el-button>
     <div class="parent">
       <props-slot
           :tableData="tableData"

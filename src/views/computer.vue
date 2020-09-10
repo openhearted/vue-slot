@@ -3,7 +3,7 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-07 11:05:44
- * @LastEditTime: 2020-09-09 19:35:05
+ * @LastEditTime: 2020-09-10 10:03:47
 -->
 <template>
     <div class="parent">
@@ -48,8 +48,8 @@ export default {
 <style>
 .parent{
     color:green;
-    width: 800px;
-    margin: 50px auto ; 
+    width: 700px;
+    margin: 100px auto ; 
 }
 .parent >div{
     display: flex;
