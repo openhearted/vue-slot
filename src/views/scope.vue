@@ -3,12 +3,13 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-02 20:48:38
- * @LastEditTime: 2020-09-09 21:49:39
+ * @LastEditTime: 2020-09-10 00:03:52
 -->
 <template>
   <div class="parent">
     <h3>这里是父组件</h3>
-
+    <hr/>
+    
     <scope-slot>
       <template slot="data" slot-scope="dataProps">
         <div class="tmpl">

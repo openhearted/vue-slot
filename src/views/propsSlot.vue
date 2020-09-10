@@ -3,7 +3,7 @@
  * @Author: liuy
  * @LastEditors: liuy
  * @Date: 2020-09-08 21:59:12
- * @LastEditTime: 2020-09-09 19:17:00
+ * @LastEditTime: 2020-09-09 23:44:14
 -->
 <template>
   <div>
@@ -22,13 +22,14 @@
           <template slot-scope="{ row }">
             <!-- 备用内容 -->
             <!-- <span>{{ row }}</span> -->
+            
             <!-- 4.2 - 后备内容展示 :row="xxx" -->
             <slot
               :name="tc.key"
               :row="row"
             >
             <!-- 备用内容 -->
-            <!-- <span>{{ row.address }}</span> -->
+            <!-- <span>{{ row }}</span> -->
             </slot>
           </template>
         </el-table-column>
